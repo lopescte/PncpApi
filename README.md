@@ -16,7 +16,7 @@ To install with [Composer](https://getcomposer.org/), simply require the
 latest version of this package.
 
 ```bash
-composer require lopescte/pncpapi
+composer require lopescte/pncp-api
 ```
 
 Make sure that the autoload file from Composer is loaded.

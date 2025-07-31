@@ -1,7 +1,7 @@
 {
-    "name": "lopescte/PncpApi",
+    "name": "lopescte/pncp-api",
     "description": "API para conexão e envio de dados para o Portal Nacional de Contratações Públicas - PNCP - do Governo Federal Brasileiro, criado pela Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021).",
-    "homepage": "https://github.com/lopescte/PncpApi",
+    "homepage": "https://github.com/lopescte/pncp-api",
     "keywords": [
         "PNCP",
         "Portal Nacional de Compras Públicas",
@@ -30,7 +30,7 @@
         "guzzlehttp/guzzle": "^7.8"
     },
     "support": {
-        "issues": "https://github.com/lopescte/PncpApi/issues"
+        "issues": "https://github.com/lopescte/pncp-api/issues"
     },
     "autoload": {
         "psr-4": {
