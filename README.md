@@ -1,12 +1,12 @@
 API do PNCP - Portal Nacional de Compras Públicas
 ======
 
-[![Latest Stable Version](http://poser.pugx.org/lopescte/adianti-plugins/v)](https://packagist.org/packages/lopescte/PncpApi)
-[![Total Downloads](http://poser.pugx.org/lopescte/adianti-plugins/downloads)](https://packagist.org/packages/lopescte/PncpApi)
-[![PHP Version Require](http://poser.pugx.org/lopescte/adianti-plugins/require/php)](https://packagist.org/packages/lopescte/PncpApi)
-[![License](http://poser.pugx.org/lopescte/adianti-plugins/license)](https://packagist.org/packages/lopescte/PncpApi)
+[![Latest Stable Version](http://poser.pugx.org/lopescte/pncpapi/v)](https://packagist.org/packages/lopescte/PncpApi)
+[![Total Downloads](http://poser.pugx.org/lopescte/pncpapi/downloads)](https://packagist.org/packages/lopescte/PncpApi)
+[![PHP Version Require](http://poser.pugx.org/lopescte/pncpapi/require/php)](https://packagist.org/packages/lopescte/PncpApi)
+[![License](http://poser.pugx.org/lopescte/pncpapi/license)](https://packagist.org/packages/lopescte/PncpApi)
 
-This plugin provides a way to create BreadCrumbs with links, manual adding items or parsing XML file.
+API para conexão e envio de dados para o Portal Nacional de Contratações Públicas - PNCP - do Governo Federal Brasileiro, criado pela Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021).
 
 ## Easy Installation
 
@@ -16,7 +16,7 @@ To install with [Composer](https://getcomposer.org/), simply require the
 latest version of this package.
 
 ```bash
-composer require lopescte/PncpApi
+composer require lopescte/pncpapi
 ```
 
 Make sure that the autoload file from Composer is loaded.
@@ -33,7 +33,7 @@ require 'vendor/autoload.php';
 Easy to use in your php files or classes, as below:
 
 ```php
-use TBreadCrumbWithLink\TBreadCrumbWithLink;;
+use Lopescte\Pncp;
 
 $breadcrumb = new TBreadCrumbWithLink;
 $breadcrumb->addItem('You are here:',NULL,TRUE);
