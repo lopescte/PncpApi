@@ -1,0 +1,132 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "cnpjCompra": {
+      "type": "string"
+    },
+    "anoCompra": {
+      "type": "integer"
+    },
+    "sequencialCompra": {
+      "type": "integer"
+    },
+    "tipoContratoId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6,7,8,9,10,11,12]
+    },
+    "numeroContratoEmpenho": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "anoContrato": {
+      "type": "integer"
+    },
+    "processo": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "categoriaProcessoId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6,7,8,9,10,11]
+    },
+    "receita": {
+      "type": "boolean"
+    },
+    "codigoUnidade": {
+      "type": "string",
+      "maxLength": 20
+    },
+    "niFornecedor": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "tipoPessoaFornecedor": {
+      "type": "string",
+      "enum": ["PF","PJ","PE"]
+    },
+    "nomeRazaoSocialFornecedor": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "niFornecedorSubContratado": {
+      "type": ["string", "null"],
+      "maxLength": 30
+    },
+    "tipoPessoaFornecedorSubContratado": {
+      "type": ["string", "null"],
+      "enum": ["PF","PJ","PE",null]
+    },
+    "nomeRazaoSocialFornecedorSubContratado": {
+      "type": ["string", "null"],
+      "maxLength": 100
+    },
+    "objetoContrato": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "informacaoComplementar": {
+      "type": ["string", "null"],
+      "maxLength": 5120
+    },
+    "valorInicial": {
+      "type": "number"
+    },
+    "numeroParcelas": {
+      "type": "integer"
+    },
+    "valorParcela": {
+      "type": "number"
+    },
+    "valorGlobal": {
+      "type": "number"
+    },
+    "valorAcumulado": {
+      "type": ["number", "null"]
+    },
+    "dataAssinatura": {
+      "type": "string"
+    },
+    "dataVigenciaInicio": {
+      "type": "string"
+    },
+    "dataVigenciaFim": {
+      "type": "string"
+    },
+    "justificativa": {
+      "type": "string"
+    },
+    "identificadorCipi": {
+      "type": ["string", "null"],
+      "maxLength": 512
+    },
+    "urlCipi": {
+      "type": ["string", "null"],
+      "minLength": 8,
+      "maxLength": 14
+    }
+  },
+  "required": [
+    "cnpjCompra",
+    "anoCompra",
+    "sequencialCompra",
+    "tipoContratoId",
+    "numeroContratoEmpenho",
+    "anoContrato",
+    "processo",
+    "categoriaProcessoId",
+    "receita",
+    "codigoUnidade",
+    "niFornecedor",
+    "tipoPessoaFornecedor",
+    "nomeRazaoSocialFornecedor",
+    "objetoContrato",
+    "valorInicial",
+    "numeroParcelas",
+    "valorGlobal",
+    "dataAssinatura",
+    "dataVigenciaInicio",
+    "dataVigenciaFim",
+    "justificativa"
+  ]
+}

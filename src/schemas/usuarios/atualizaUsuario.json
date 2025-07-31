@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "nome": {
+            "type": "string"
+             },
+        "cpfCnpj": {
+            "type": "string",
+            "minLength":14,
+            "maxLength":14
+             },
+        "entesAutorizados":{
+            "type": "array",
+            "items":[]
+            }      
+        },
+        "required": [
+            "cpfCnpj", "entesAutorizados"
+        ]
+}

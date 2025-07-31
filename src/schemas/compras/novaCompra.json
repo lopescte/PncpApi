@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "codigoUnidadeCompradora": {
+      "type": "string"
+    },
+    "tipoInstrumentoConvocatorioId": {
+      "type": "integer",
+      "enum": [1,2,3]
+    },
+    "modalidadeId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    },
+    "modoDisputaId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6]
+    },
+    "numeroCompra": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "anoCompra": {
+      "type": "integer"
+    },
+    "numeroProcesso": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "objetoCompra": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "informacaoComplementar": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "srp": {
+      "type": "boolean"
+    },
+    "dataAberturaProposta": {
+      "type": "string"
+    },
+    "dataEncerramentoProposta": {
+      "type": "string"
+    },
+    "amparoLegalId": {
+      "type": "string"
+    },
+    "linkSistemaOrigem": {
+      "type": "string",
+      "maxLength": 512
+    },
+    "linkProcessoEletronico": {
+      "type": "string",
+      "maxLength": 512
+    },
+    "justificativaPresencial": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "itensCompra": {
+      "type": "array",
+      "items": [
+        {
+          "type": "array",
+          "properties": {
+            "numeroItem": {
+              "type": "integer"
+            },
+            "materialOuServico": {
+              "type": "string",
+              "enum": ["M","S"]
+            },
+            "tipoBeneficioId": {
+              "type": "string"
+            },
+            "incentivoProdutivoBasico": {
+              "type": "boolean"
+            },
+            "descricao": {
+              "type": "string",
+              "maxLength": 2048
+            },
+            "quantidade": {
+              "type": "integer"
+            },
+            "unidadeMedida": {
+              "type": "string",
+              "maxLength": 30
+            },
+            "valorUnitarioEstimado": {
+              "type": "number"
+            },
+            "valorTotal": {
+              "type": "number"
+            },
+            "criterioJulgamentoId": {
+              "type": "integer",
+              "enum": [1,2,4,5,6,7,8,9]
+            },
+            "orcamentoSigiloso": {
+              "type": "boolean"
+            },
+            "itemCategoriaId": {
+              "type": "integer",
+              "enum": [1,2,3]
+            },
+            "patrimonio": {
+              "type": "string",
+              "maxLength": 255
+            },
+            "codigoRegistroImobiliario": {
+              "type": "string",
+              "maxLength": 255
+            },
+            "aplicabilidadeMargemPreferenciaNormal": {
+              "type": "boolean"
+            },
+            "aplicabilidadeMargemPreferenciaAdicional": {
+              "type": "boolean"
+            },
+            "percentualMargemPreferenciaNormal": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "percentualMargemPreferenciaAdicional": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            },
+            "ncmNbsCodigo": {
+              "type": "string",
+              "maxLength": 15
+            },
+            "ncmNbsDescricao": {
+              "type": "string",
+              "maxLength": 2048
+            }
+          },
+          "required": [
+            "numeroItem",
+            "materialOuServico",
+            "incentivoProdutivoBasico",
+            "descricao",
+            "quantidade",
+            "unidadeMedida",
+            "valorUnitarioEstimado",
+            "valorTotal",
+            "criterioJulgamentoId",            
+            "orcamentoSigiloso",
+            "aplicabilidadeMargemPreferenciaNormal",
+            "aplicabilidadeMargemPreferenciaAdicional"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "codigoUnidadeCompradora",
+    "tipoInstrumentoConvocatorioId",
+    "modalidadeId",
+    "modoDisputaId",
+    "numeroCompra",
+    "anoCompra",
+    "numeroProcesso",
+    "objetoCompra",
+    "srp",
+    "dataAberturaProposta",
+    "dataEncerramentoProposta",
+    "amparoLegalId",
+    "itensCompra"
+  ]
+}

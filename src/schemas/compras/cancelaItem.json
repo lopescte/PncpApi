@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "situacaoCompraItemId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5]
+    },
+    "justificativa": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "situacaoCompraItemId",
+    "justificativa"
+  ]
+}

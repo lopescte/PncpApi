@@ -1,0 +1,48 @@
+{
+    "name": "lopescte/PncpApi",
+    "description": "API para conexão e envio de dados para o Portal Nacional de Contratações Públicas - PNCP - do Governo Federal Brasileiro, criado pela Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021).",
+    "homepage": "https://github.com/lopescte/PncpApi",
+    "keywords": [
+        "PNCP",
+        "Portal Nacional de Compras Públicas",
+        "Gov.BR",
+        "Lei nº. 14133/2021"
+    ],
+    "type": "library",
+    "version": "1.0.0",
+    "license": [
+        "LGPL-3.0-or-later",
+        "GPL-3.0-or-later",
+        "MIT"
+    ],
+    "authors": [
+        {
+            "name": "Marcelo Lopes",
+            "email": "lopes.cte@gmail.com",
+            "homepage": "https://www.reiselopes.com.br"
+        }
+    ],
+    "require": {
+        "php": "^7.0 || ^8.0",
+        "justinrainbow/json-schema": "^5.2",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "support": {
+        "issues": "https://github.com/lopescte/PncpApi/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "Lopescte\\PncpApi\\": "src/"
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://packagist.org"
+        },
+        { "packagist": false }
+    ],
+    "minimum-stability": "dev"
+}

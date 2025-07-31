@@ -1,0 +1,88 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "codigoUnidadeCompradora": {
+      "type": "string"
+    },
+    "tipoInstrumentoConvocatorioId": {
+      "type": "integer",
+      "enum": [1,2,3]
+    },
+    "modalidadeId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6,7,8,9,10,11,12,13]
+    },
+    "modoDisputaId": {
+      "type": "integer",
+      "enum": [1,2,3,4,5,6]
+    },
+    "situacaoCompraId": {
+      "type": "integer",
+      "enum": [1,2,3,4]
+    },
+    "numeroCompra": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "anoCompra": {
+      "type": "integer"
+    },
+    "numeroProcesso": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "objetoCompra": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "informacaoComplementar": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "srp": {
+      "type": "boolean"
+    },
+    "dataAberturaProposta": {
+      "type": "string"
+    },
+    "dataEncerramentoProposta": {
+      "type": "string"
+    },
+    "amparoLegalId": {
+      "type": "string"
+    },
+    "linkSistemaOrigem": {
+      "type": "string",
+      "maxLength": 512
+    },
+    "linkProcessoEletronico": {
+      "type": "string",
+      "maxLength": 512
+    },
+    "justificativaPresencial": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "justificativa": {
+      "type": "string",
+      "maxLength": 255 
+    }
+  },
+  "required": [
+    "codigoUnidadeCompradora",
+    "tipoInstrumentoConvocatorioId",
+    "modalidadeId",
+    "modoDisputaId",
+    "situacaoCompraId",
+    "numeroCompra",
+    "anoCompra",
+    "numeroProcesso",
+    "objetoCompra",
+    "srp",
+    "dataAberturaProposta",
+    "dataEncerramentoProposta",
+    "amparoLegalId",
+    "justificativa"
+  ]
+}

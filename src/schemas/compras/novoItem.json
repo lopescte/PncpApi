@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "array",
+      "properties": {
+        "numeroItem": {
+          "type": "integer"
+        },
+        "materialOuServico": {
+          "type": "string",
+          "enum": ["M","S"]
+        },
+        "tipoBeneficioId": {
+          "type": "string"
+        },
+        "incentivoProdutivoBasico": {
+          "type": "boolean"
+        },
+        "descricao": {
+          "type": "string",
+          "maxLength": 2048
+        },
+        "quantidade": {
+          "type": "integer"
+        },
+        "unidadeMedida": {
+          "type": "string",
+          "maxLength": 30
+        },
+        "valorUnitarioEstimado": {
+          "type": "number"
+        },
+        "valorTotal": {
+          "type": "number"
+        },
+        "criterioJulgamentoId": {
+          "type": "integer",
+          "enum": [1,2,4,5,6,7,8,9]
+        },
+        "orcamentoSigiloso": {
+          "type": "boolean"
+        },
+        "itemCategoriaId": {
+          "type": "integer",
+          "enum": [1,2,3]
+        },
+        "patrimonio": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "codigoRegistroImobiliario": {
+          "type": "string",
+          "maxLength": 255
+        },
+        "aplicabilidadeMargemPreferenciaNormal": {
+          "type": "boolean"
+        },
+        "aplicabilidadeMargemPreferenciaAdicional": {
+          "type": "boolean"
+        },
+        "percentualMargemPreferenciaNormal": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "percentualMargemPreferenciaAdicional": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 100
+        },
+        "ncmNbsCodigo": {
+          "type": "string",
+          "maxLength": 15
+        },
+        "ncmNbsDescricao": {
+          "type": "string",
+          "maxLength": 2048
+        }
+      },
+      "required": [
+        "numeroItem",
+        "materialOuServico",
+        "incentivoProdutivoBasico",
+        "descricao",
+        "quantidade",
+        "unidadeMedida",
+        "valorUnitarioEstimado",
+        "valorTotal",
+        "criterioJulgamentoId",
+        "orcamentoSigiloso",
+        "aplicabilidadeMargemPreferenciaNormal",
+        "aplicabilidadeMargemPreferenciaAdicional"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "quantidadeHomologada": {
+      "type": "number"
+    },
+    "valorUnitarioHomologado": {
+      "type": "number"
+    },
+    "valorTotalHomologado": {
+      "type": "number"
+    },
+    "percentualDesconto": {
+      "type": "number"
+    },
+    "tipoPessoaId": {
+      "type": "string",
+      "enum": ["PJ","PF","PE"]
+    },
+    "niFornecedor": {
+      "type": "string"
+    },
+    "nomeRazaoSocialFornecedor": {
+      "type": "string"
+    },
+    "porteFornecedorId": {
+      "type": "string",
+      "enum": ["1","2","3"]
+    },
+    "codigoPais": {
+      "type": "string",
+      "enum": ["AFG","ZAF","ALB","DEU","AND","AGO","ATG","SAU","DZA","ARG","ARM","AUS","AUT","AZE","BHS","BGD","BRB","BHR","BEL","BLZ","BEN","BLR","BOL","BIH","BWA","BRA","BRN","BGR","BFA","BDI","BTN","CPV","CMR","KHM","CAN","QAT","KAZ","TCD","CHL","CHN","CYP","COL","COM","COG","PRK","KOR","CIV","CRI","HRV","KWT","CUB","DNK","DMA","EGY","ARE","ECU","ERI","SVK","SVN","ESP","SWZ","PSE","USA","EST","ETH","FJI","PHL","FIN","FRA","GAB","GMB","GHA","GEO","GRD","GRC","GTM","GUY","GIN","GNQ","GNB","HTI","HND","HUN","YEM","MHL","IND","IDN","IRN","IRQ","IRL","ISL","ISR","ITA","JAM","JPN","DJI","JOR","LAO","LSO","LVA","LBN","LBR","LBY","LIE","LTU","LUX","MKD","MDG","MYS","MWI","MDV","MLI","MLT","MAR","MUS","MRT","MEX","MMR","FSM","MOZ","MDA","MCO","MNG","MNE","NAM","NRU","NPL","NIC","NER","NGA","NOR","NZL","OMN","NLD","PLW","PAN","PNG","PAK","PRY","PER","POL","PRT","KEN","KGZ","KIR","GBR","CAF","CZE","COD","DOM","ROU","RWA","RUS","SLB","SLV","WSM","LCA","KNA","SMR","STP","VCT","SYC","SEN","SLE","SRB","SGP","SYR","SOM","LKA","SDN","SSD","SWE","CHE","SUR","THA","TWN","TJK","TZA","TLS","TGO","TON","TTO","TUN","TKM","TUR","TUV","UKR","UGA","URY","UZB","VUT","VAT","VEN","VNM","ZMB","ZWE"]
+    },
+    "indicadorSubcontratacao": {
+      "type": "boolean"
+    },
+    "ordemClassificacaoSrp": {
+      "type": "integer"
+    },
+    "dataResultado": {
+      "type": "string"
+    },
+    "naturezaJuridicaId": {
+      "type": "string"
+    },
+    "dataResultado": {
+      "type": "string"
+    },
+    "dataCancelamento": {
+      "type": "string"
+    },
+    "motivoCancelamento": {
+      "type": "string"
+    },
+    "situacaoCompraItemResultadoId": {
+      "type": "integer",
+      "enum": [1,2]
+    },
+    "aplicacaoMargemPreferencia": {
+      "type": "boolean"
+    },
+    "amparoLegalMargemPreferenciaId": {
+      "type": "integer"
+    },
+    "aplicacaoBeneficioMeEpp": {
+      "type": "boolean"
+    },
+    "aplicacaoCriterioDesempate": {
+      "type": "boolean"
+    },
+    "amparoLegalCriterioDesempateId": {
+      "type": "integer"
+    },
+    "justificativa": {
+      "type": "string"
+    }
+  },
+  "dependentRequired": {
+     "aplicacaoMargemPreferencia": ["amparoLegalMargemPreferenciaId"],
+     "aplicacaoCriterioDesempate": ["amparoLegalCriterioDesempateId"]
+  },
+  "required": [
+    "quantidadeHomologada",
+    "valorUnitarioHomologado",
+    "valorTotalHomologado",
+    "percentualDesconto",
+    "tipoPessoaId",
+    "niFornecedor",
+    "nomeRazaoSocialFornecedor",
+    "porteFornecedorId",
+    "codigoPais",
+    "indicadorSubcontratacao",
+    "ordemClassificacaoSrp",
+    "dataResultado",
+    "naturezaJuridicaId",
+    "situacaoCompraItemResultadoId",
+    "aplicacaoMargemPreferencia",
+    "aplicacaoBeneficioMeEpp",
+    "aplicacaoCriterioDesempate",
+    "justificativa"
+  ]
+}

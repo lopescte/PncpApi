@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "tipoTermoContratoId": {
+      "type": "integer",
+      "enum": [1,2,3]
+    },
+    "numeroTermoContrato": {
+      "type": "string",
+      "maxLength": 50
+    },
+    "objetoTermoContrato": {
+      "type": "string",
+      "maxLength": 5120
+    },
+    "dataAssinatura": {
+      "type": "string"
+    },
+    "qualificacaoAcrescimoSupressao": {
+      "type": "boolean"
+    },
+    "qualificacaoVigencia": {
+      "type": "boolean"
+    },
+    "qualificacaoFornecedor": {
+      "type": "boolean"
+    },
+    "qualificacaoReajuste": {
+      "type": "boolean"
+    },
+    "qualificacaoInformativo": {
+      "type": "boolean"
+    },
+    "niFornecedor": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "tipoPessoaFornecedor": {
+      "type": "string",
+      "enum": ["PF","PJ","PE"]
+    },
+    "nomeRazaoSocialFornecedor": {
+      "type": "string",
+      "maxLength": 100
+    },
+    "niFornecedorSubContratado": {
+      "type": ["string","null"],
+      "maxLength": 30
+    },
+    "tipoPessoaFornecedorSubContratado": {
+      "type": ["string", "null"],
+      "enum": ["PF","PJ","PE",null]
+    },
+    "nomeRazaoSocialFornecedorSubContratado": {
+      "type": ["string", "null"],
+      "maxLength": 100
+    },
+    "informativoObservacao": {
+      "type": ["string", "null"],
+      "maxLength": 5120
+    },
+    "fundamentoLegal": {
+      "type": ["string", "null"],
+      "maxLength": 5120
+    },
+    "valorAcrescido": {
+      "type": ["number", "null"]
+    },
+    "numeroParcelas": {
+      "type": ["integer", "null"]
+    },
+    "valorParcela": {
+      "type": ["number", "null"]
+    },
+    "valorGlobal": {
+      "type": ["number", "null"]
+    },
+    "prazoAditadoDias": {
+      "type": ["integer", "null"]
+    },
+    "dataVigenciaInicio": {
+      "type": ["string", "null"]
+    },
+    "dataVigenciaFim": {
+      "type": ["string", "null"]
+    }
+  },
+  "required": [
+    "tipoTermoContratoId",
+    "numeroTermoContrato",
+    "objetoTermoContrato",
+    "dataAssinatura",
+    "qualificacaoAcrescimoSupressao",
+    "qualificacaoVigencia",
+    "qualificacaoFornecedor",
+    "qualificacaoReajuste",
+    "qualificacaoInformativo"
+  ]
+}
