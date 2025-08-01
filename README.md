@@ -1,25 +1,25 @@
 API do PNCP - Portal Nacional de Compras Públicas
 ======
 
-[![Latest Stable Version](http://poser.pugx.org/lopescte/pncpapi/v)](https://packagist.org/packages/lopescte/PncpApi)
-[![Total Downloads](http://poser.pugx.org/lopescte/pncpapi/downloads)](https://packagist.org/packages/lopescte/PncpApi)
-[![PHP Version Require](http://poser.pugx.org/lopescte/pncpapi/require/php)](https://packagist.org/packages/lopescte/PncpApi)
-[![License](http://poser.pugx.org/lopescte/pncpapi/license)](https://packagist.org/packages/lopescte/PncpApi)
+[![Latest Stable Version](http://poser.pugx.org/lopescte/pncp-api/v)](https://packagist.org/packages/lopescte/pncp-api)
+[![Total Downloads](http://poser.pugx.org/lopescte/pncp-api/downloads)](https://packagist.org/packages/lopescte/pncp-api)
+[![PHP Version Require](http://poser.pugx.org/lopescte/pncp-api/require/php)](https://packagist.org/packages/lopescte/pncp-api)
+[![License](http://poser.pugx.org/lopescte/pncp-api/license)](https://packagist.org/packages/lopescte/pncp-api)
 
 API para conexão e envio de dados para o Portal Nacional de Contratações Públicas - PNCP - do Governo Federal Brasileiro, criado pela Lei de Licitações e Contratos Administrativos (Lei nº 14.133/2021).
 
-## Easy Installation
+## Instalação
 
-### Install with composer
+### Instale com o composer
 
-To install with [Composer](https://getcomposer.org/), simply require the
-latest version of this package.
+Para instalar com o [Composer](https://getcomposer.org/), simplesmente faça um require para a
+última versão deste pacote.
 
 ```bash
 composer require lopescte/pncp-api
 ```
 
-Make sure that the autoload file from Composer is loaded.
+Certifique-se que o arquivo autoload do composer está carregado.
 
 ```php
 // somewhere early in your project's loading, require the Composer autoloader
@@ -28,17 +28,45 @@ require 'vendor/autoload.php';
 
 ```
 
-## Usage
+## Uso
 
-Easy to use in your php files or classes, as below:
+Primeiro inicialize a conexão ao PNCP com suas credenciais, como abaixo:
 
 ```php
-use Lopescte\Pncp;
+use Lopescte\PncpApi\Pncp;
 
-$breadcrumb = new TBreadCrumbWithLink;
-$breadcrumb->addItem('You are here:',NULL,TRUE);
-$breadcrumb->addItem('Home', 'MyHomeClassName',FALSE);
-$breadcrumb->renderFromXML('MyMenu.xml', __CLASS__);
+$pncp = new Pncp($seu_login_pncp, $sua_senha_pncp, $ambiente_pncp); // $ambiente_pncp por padrão é setado para 1 (Homologação); Para ambiente de produção, sete 2 nesta variável.
+```
+
+Com a conexão inicializada, utilize qualquer das classes de funções chamando-as diretamente, sem se esquecer de declarar o uso, como abaixo:
+
+```php
+use Lopescte\PncpApi\Usuarios;
+
+$usuario = new Usuarios;
+
+$usuario->buscaUsuarioPorId($seu_id_de_usuario_do_pncp);
+
+if($usuario->response['entesAutorizados'])
+{
+    foreach($usuario->response['entesAutorizados'] as $entidade)
+    {
+        // Verifique aqui se o órgão que vc necessita está nas suas entidades autorizadas
+    }  
+}
+
+// Para inserir autorização para algum órgão faça assim:
+
+$usuario->insereEntesUsuarioPorId((int) $seu_id_de_usuario_do_pncp, $cnpj_do_orgao);
+```
+
+As respostas da API após uma chamada de função serão sempre um objeto como abaixo:
+
+```php
+if($usuario->response)
+{
+    // Sua lógica aqui  
+}
 ```
 
 ## Author
